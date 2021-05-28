@@ -41,8 +41,6 @@ export class HomeComponent implements OnInit {
   }
 
   search(event) {
-    console.log(event);
-
     this.router.navigate(['/home', event]);
   }
 
