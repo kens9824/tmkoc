@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tmkoc"
+    }
+  },
+  "defaultProject": "tmkoc",
+  "cli": {
+    "analytics": "810522c6-320f-472c-8773-0740afdc518b"
+  }
 }

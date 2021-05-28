@@ -1,0 +1,32 @@
+.youtube-video p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20;
+    font-weight: 500;
+}
+
+.shop-filt-inp {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px !important;
+}
+
+.filter-opt {
+    display: flex;
+    align-items: baseline;
+}
+
+.filter-opt p {
+    font-family: "Poppins-Regular";
+    color: #b3b8bc;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.filter-opt select {
+    font-family: "Poppins-Regular";
+    margin-right: 10px;
+}

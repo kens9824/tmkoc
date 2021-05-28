@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="text-center ser-det" style="margin-bottom: 40px;">
+        <h2>Related Videos</h2>
+        <div class="shop-filt-inp">
+
+            <input type="number" name="serach" (change)="search($event.target.value)" id="shop" placeholder="Search Epicode">
+            <!-- <button (click)="search($event.target.value)">Search</button> -->
+
+            <div class="filter-opt">
+                <p>10 items listed</p>
+                <select name="filter" id="short-filter" (change)="selectChange($event.target.value)">
+                        <option *ngFor="let o of Options" value="{{o.id}}" >{{o.value}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="withoutfil">
+        <div class="col-md-4" *ngFor="let link of videoList">
+            <div class="youtube-video">
+                <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(link.url)" width="100%" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p>{{link.id}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="withfil">
+        <div class="col-md-4" *ngFor="let link of showvideo">
+            <div class="youtube-video">
+                <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(link.url)" width="100%" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p>{{link.id}}</p>
+            </div>
+        </div>
+    </div>
+</div>
